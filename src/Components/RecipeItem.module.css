@@ -1,0 +1,48 @@
+.recipe-item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1.5rem 2.5rem;
+  background-color: #95d5b2;
+  margin-right: 0.5rem;
+  margin-bottom: 0.5rem;
+  border-radius: 5px;
+}
+.recipe-item:hover {
+  background-color: #b7e4c7;
+  transition: all 0.5s;
+}
+.recipe-item:last-of-type {
+  margin-bottom: 0;
+}
+.recipe-detail {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  max-width: 70%;
+}
+.recipe-detail h3 {
+  text-decoration: underline;
+  font-size: 1.75rem;
+  margin-bottom: 1rem;
+}
+.recipe-discription {
+  font-size: 1.25rem;
+  line-height: 1.5rem;
+  letter-spacing: 1.5px;
+  margin-bottom: 0.75rem;
+}
+.recipe-price {
+  background-color: #74c69d;
+  padding: 0.25rem 1.5rem;
+  border-radius: 50px;
+}
+.recipe-price-currency {
+  font-size: 1.5rem;
+  margin-right: 0.5rem;
+}
+
+.recipe-price-amount {
+  font-size: 1.75rem;
+  font-weight: bold;
+}

@@ -1,0 +1,63 @@
+.checkout-form {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  background-color: #b7e4c7;
+  border-radius: 5px;
+  padding: 0.75rem 1.5rem;
+}
+
+.form-control {
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+}
+.form-control label {
+  font-size: 1.5rem;
+  flex: 1;
+}
+.form-control textarea {
+  min-height: 7.5rem;
+  max-height: 15rem;
+}
+.form-control input,
+.form-control textarea {
+  flex: 2;
+  border: none;
+  padding: 0.5rem 1rem;
+  border-radius: 5px;
+}
+
+.form-control input:focus,
+.form-control textarea:focus {
+  outline: 2px solid #40916c;
+}
+
+.form-actions {
+  display: flex;
+  flex-direction: row;
+  gap: 0.5rem;
+  margin-top: 1.5rem;
+  justify-content: flex-end;
+}
+.form-actions button {
+  border: none;
+  border-radius: 5px;
+  padding: 0.5rem 2.5rem;
+}
+.btn-confirm,
+.btn-confirm:active {
+  background-color: #94cfa9;
+}
+.btn-confirm:hover {
+  background-color: #40916c;
+  transition: all 0.5s;
+}
+.btn-cancel,
+.btn-cancel:active {
+  background-color: #f0091d7a;
+}
+.btn-cancel:hover {
+  background-color: #ea2651;
+  transition: all 0.5s;
+}

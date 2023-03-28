@@ -1,0 +1,55 @@
+.cart-item {
+  display: grid;
+  grid-template-columns: 1fr auto auto;
+  background-color: #95d5b2;
+  margin-right: 0.5rem;
+  border-radius: 5px;
+  padding: 0.5rem 0 0.5rem 1.5rem;
+  column-gap: 0.5rem;
+}
+.item-name {
+  display: flex;
+  align-items: center;
+  font-size: 1.5rem;
+  color: #1b4332;
+}
+.times {
+  font-size: 1.5rem;
+  font-weight: bold;
+  margin-left: 1rem;
+}
+.times-value {
+  font-size: 1.75rem;
+}
+.cart-item:hover {
+  background-color: #d8f3dc;
+  transition: all 0.5s;
+}
+.cart-item_actions {
+  display: flex;
+  margin-top: -0.5rem;
+  margin-bottom: -0.5rem;
+}
+.cart-item_actions > div {
+  display: flex;
+  flex-direction: column;
+}
+.cart-item_actions button {
+  border: none;
+  flex: 1;
+  padding: 0.5rem;
+}
+.btn-remove {
+  background-color: rgb(222, 141, 141);
+  border-top-left-radius: 50px;
+  border-bottom-left-radius: 50px;
+  border: 2px solid #fff !important;
+  border-right: none !important;
+}
+.btn-addOne {
+  border-bottom: 1px solid #444 !important;
+  border-top-right-radius: 5px;
+}
+.btn-subOne {
+  border-bottom-right-radius: 5px;
+}

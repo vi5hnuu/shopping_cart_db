@@ -1,0 +1,121 @@
+/* Hero */
+.hero-container {
+}
+.hero-image-container {
+  position: relative;
+  height: 35rem;
+}
+
+.hero-image-container img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  clip-path: polygon(0 0, 100% 0, 100% 50%, 0% 100%);
+}
+.hero-image-container::after {
+  display: block;
+  content: " ";
+  position: absolute;
+  left: 0;
+  top: 0;
+  background-color: #52b788;
+  width: 100%;
+  height: 100%;
+  clip-path: polygon(0 0, 100% 0, 100% 50%, 0% 100%);
+  opacity: 0.5;
+}
+.hero-intro {
+  margin: auto;
+  width: 65rem;
+  max-width: 85%;
+  border-radius: 5px;
+  background-color: #52b788;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 6px 12px -2px, rgba(0, 0, 0, 0.3) 0px 3px 7px -3px;
+  padding: 3.5rem 4.5rem;
+  transform: translateY(-70%);
+}
+.hero-intro h2 {
+  font-size: 2.5rem;
+  color: #081c15;
+  margin-bottom: 1.5rem;
+}
+.hero-intro p {
+  font-size: 1.75rem;
+  text-align: justify;
+  color: #b7e4c7;
+  margin-bottom: 1rem;
+}
+.hero-intro p:last-of-type {
+  margin-bottom: 0;
+}
+/* Recipies list */
+.recipe-container {
+  background-color: #52b788;
+  width: 95rem;
+  max-width: 95%;
+  margin: auto;
+  margin-top: -7.5rem;
+  border-radius: 5px;
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px, rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
+  padding: 1.5rem;
+  margin-bottom: 2.5rem;
+}
+.recipe-container_title {
+  text-align: center;
+  font-size: 1.75rem;
+  text-transform: uppercase;
+  color: #1b4332;
+  border-bottom: 2px solid #1b4332;
+  margin-bottom: 1.5rem;
+  padding-bottom: 1rem;
+  border-bottom-left-radius: 5px;
+  border-bottom-right-radius: 5px;
+}
+
+footer {
+  text-align: center;
+  color: #fff;
+  margin-bottom: 0.5rem;
+}
+
+.paginate {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 1rem;
+  gap: 0.75rem;
+  font-size: 1.5rem;
+  list-style: none;
+  margin-top: 1.5rem;
+  background-color: #d8f3dc;
+  border-radius: 5px;
+}
+.paginate-active {
+  background-color: #40916c;
+  padding: 1.25rem;
+  clip-path: circle();
+}
+
+.paginate-inactive {
+  padding: 1.25rem;
+  color: #aaa;
+  clip-path: circle();
+}
+
+.paginate-next,
+.paginate-prev {
+  font-weight: bold;
+}
+.paginate-next:hover {
+  transform: scale(1.2) translateX(2px);
+}
+.paginate-prev:hover {
+  transform: scale(1.2) translateX(-2px);
+}
+.paginate-next:hover,
+.paginate-prev:hover {
+  transition: all 0.5s;
+}

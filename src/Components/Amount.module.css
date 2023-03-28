@@ -1,0 +1,14 @@
+.amount-container {
+  background-color: #74c69d;
+  padding: 0.25rem 1.5rem;
+  border-radius: 50px;
+}
+.currency {
+  font-size: 1.5rem;
+  margin-right: 0.5rem;
+}
+
+.amount {
+  font-size: 1.75rem;
+  font-weight: bold;
+}
