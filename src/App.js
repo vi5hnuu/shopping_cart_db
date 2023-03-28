@@ -13,8 +13,10 @@ import { useEffect } from 'react';
 function App() {
   const cartctx = useContext(cartContext)
   const [isLoading, setIsLoading] = useState(false)
+  const [pageCountIsLoading, setPageCountIsLoading] = useState(false)
   const [recipies, setRecipies] = useState([])
-  let totalPages = 15;
+  const [pageCount, setPageCount] = useState(0)
+
   useEffect(() => {
     setIsLoading(true)
     getRecipeForPage(1).then(recipies => {
@@ -24,9 +26,16 @@ function App() {
       setIsLoading(false)
     })
   }, [])
+  useEffect(() => {
+    getRecipeCount().then((pageCount) => {
+      setPageCount(pageCount)
+    })
+  }, [])
   async function getRecipeCount() {
+    setPageCountIsLoading(true)
     const { total } = await (await axios.get('http://localhost:5000/recipies-count')).data
-    return total
+    setPageCountIsLoading(false)
+    return Math.ceil((total * 1.0) / 10)
   }
   async function onPageChangeHandler({ selected }) {
     setIsLoading(true)
@@ -64,7 +73,7 @@ function App() {
         </h3>
         <Recipies isLoading={isLoading} recipies={recipies} />
         <ReactPaginate
-          pageCount={totalPages}
+          pageCount={pageCount}
           initialPage={0}
           breakLabel='...'
           className='paginate'
