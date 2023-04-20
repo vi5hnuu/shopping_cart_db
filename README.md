@@ -4,3 +4,7 @@ https://vi5hnuu.github.io/shopping_cart_react/
 ////////////////////////////////////////////////
 
 https://vi5hnuu.github.io/shopping_cart_db/
+
+Backend is not hoisted so only front will work 
+
+///////////////
